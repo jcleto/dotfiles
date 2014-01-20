@@ -156,6 +156,7 @@ mode "resize" {
 
 for_window [class="xfreerdp"] floating enable
 #for_window [class="xfreerdp"] fullscreen
+for_window [title="galculator"] floating enable
 
 bindsym $mod+r mode "resize"
 
