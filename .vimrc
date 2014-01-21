@@ -51,8 +51,8 @@ map <c-h> <c-w>h
 
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+map <Leader>n <esc>:bp<CR>
+map <Leader>m <esc>:bn<CR>
 
 
 " map sort function to a key
@@ -91,7 +91,7 @@ set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
-set colorcolumn=80
+set colorcolumn=100
 highlight ColorColumn ctermbg=233
 
 
@@ -200,6 +200,8 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 "" set nofoldenable
 
-let g:vim_json_syntax_conceal = 0
+let g:vim_json_syntax_conceal=0
 map <Leader>j !python -m json.tool<CR>
-
+au BufRead,BufNewFile *.robot setfiletype robot
+let g:flake8_max_line_length=99
+let g:airline#extensions#tabline#enabled=1
