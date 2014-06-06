@@ -93,7 +93,7 @@ set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=100
-highlight ColorColumn ctermbg=233
+highlight ColorColumn ctermbg=lightgrey
 
 
 " easier formatting of paragraphs
@@ -104,6 +104,7 @@ nmap Q gqap
 " Useful settings
 set history=700
 set undolevels=700
+highlight CursorLine   cterm=NONE ctermbg=lightgrey ctermfg=black
 set cursorline
 
 " Real programmers don't use TABs but spaces
