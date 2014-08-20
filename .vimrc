@@ -70,15 +70,14 @@ vnoremap > >gv  " better indentation
 " MUST be inserted BEFORE the colorscheme command
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-
-
 " Color scheme
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
-" color wombat256mod
+color wombat256mod
+" colorscheme lucius
 " color proton
-color github
+" color github
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
@@ -93,8 +92,7 @@ set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=100
-highlight ColorColumn ctermbg=lightgrey
-
+highlight ColorColumn ctermbg=236
 
 " easier formatting of paragraphs
 vmap Q gq
@@ -104,7 +102,7 @@ nmap Q gqap
 " Useful settings
 set history=700
 set undolevels=700
-highlight CursorLine   cterm=NONE ctermbg=lightgrey ctermfg=black
+" highlight CursorLine   cterm=NONE ctermbg=eee9e9 ctermfg=black
 set cursorline
 
 " Real programmers don't use TABs but spaces
@@ -128,12 +126,15 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-
+"
 " Setup Pathogen to manage your plugins
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 "t clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim Now you can install any plugin into a .vim/bundle/plugin-name/ folder
-call pathogen#infect()
+" call pathogen#infect()
+execute pathogen#infect()
+
+
 
 
 " ============================================================================
